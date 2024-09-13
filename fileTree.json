@@ -1,0 +1,118 @@
+{
+  "Work": {
+    "Chuxun_SSD_Filmware": {
+      "index.html": null,
+      ".git": {
+        "COMMIT_EDITMSG": null,
+        "config": null,
+        "description": null,
+        "FETCH_HEAD": null,
+        "HEAD": null,
+        "index": null,
+        "packed-refs": null,
+        "hooks": {
+          "applypatch-msg.sample": null,
+          "commit-msg.sample": null,
+          "fsmonitor-watchman.sample": null,
+          "post-update.sample": null,
+          "pre-applypatch.sample": null,
+          "pre-commit.sample": null,
+          "pre-merge-commit.sample": null,
+          "pre-push.sample": null,
+          "pre-rebase.sample": null,
+          "pre-receive.sample": null,
+          "prepare-commit-msg.sample": null,
+          "push-to-checkout.sample": null,
+          "update.sample": null
+        },
+        "info": {
+          "exclude": null
+        },
+        "logs": {
+          "HEAD": null,
+          "refs": {
+            "heads": {
+              "main": null
+            },
+            "remotes": {
+              "origin": {
+                "HEAD": null
+              }
+            }
+          }
+        },
+        "objects": {
+          "07": {
+            "9a58a9dbdb425933478fecf908a6dfcf394be5": null
+          },
+          "ca": {
+            "8389539f3726b3934828df776fb17705acf6d5": null
+          },
+          "info": {},
+          "pack": {
+            "pack-2734bda60479ca98462e96ed9a0f2dc6f7d942dd.idx": null,
+            "pack-2734bda60479ca98462e96ed9a0f2dc6f7d942dd.pack": null
+          }
+        },
+        "refs": {
+          "heads": {
+            "main": null
+          },
+          "remotes": {
+            "origin": {
+              "HEAD": null
+            }
+          },
+          "tags": {}
+        }
+      },
+      ".github": {
+        "workflows": {
+          "static.yml": null
+        }
+      },
+      "1.60T_Image_N": {
+        "HS36_BIST_img.bin": null,
+        "HS36_BL_img.bin": null,
+        "HS36_FW_img.bin": null,
+        "HS36_MINI_D.icm.code": null,
+        "mn-pn.001": null
+      },
+      "1.92T_Image_N": {
+        "HS36_BIST_img.bin": null,
+        "HS36_BL_img.bin": null,
+        "HS36_FW_img.bin": null,
+        "HS36_MINI_D.icm.code": null,
+        "mn-pn.001": null
+      },
+      "3.20T_Image_N": {
+        "HS36_BIST_img.bin": null,
+        "HS36_BL_img.bin": null,
+        "HS36_FW_img.bin": null,
+        "HS36_MINI_D.icm.code": null,
+        "mn-pn.001": null
+      },
+      "3.84T_Image_N": {
+        "HS36_BIST_img.bin": null,
+        "HS36_BL_img.bin": null,
+        "HS36_FW_img.bin": null,
+        "HS36_MINI_D.icm.code": null,
+        "mn-pn.001": null
+      },
+      "6.40T_Image_N": {
+        "HS36_BIST_img.bin": null,
+        "HS36_BL_img.bin": null,
+        "HS36_FW_img.bin": null,
+        "HS36_MINI_D.icm.code": null,
+        "mn-pn.001": null
+      },
+      "7.68T_Image_N": {
+        "HS36_BIST_img.bin": null,
+        "HS36_BL_img.bin": null,
+        "HS36_FW_img.bin": null,
+        "HS36_MINI_D.icm.code": null,
+        "mn-pn.001": null
+      }
+    }
+  }
+}
