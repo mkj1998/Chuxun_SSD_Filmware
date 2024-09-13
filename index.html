@@ -11,7 +11,7 @@
             padding: 20px;
             background-color: #f4f4f4;
         }
-        h1, h2, h3 {
+        h1, h2 {
             color: #333;
         }
         .version {
@@ -37,8 +37,8 @@
     <h1>Firmware Downloads</h1>
     <div id="versions"></div>
     <script>
-        function createDownloadLink(version, model, name) {
-            const url = `firmware/${version}/${model}/${name}`;
+        function createDownloadLink(version, name) {
+            const url = `${version}/${name}`;
             return `<li><a href="${url}" download>${name}</a></li>`;
         }
 
@@ -50,17 +50,11 @@
                 versionDiv.innerHTML = `<h2>${version}</h2>`;
                 versionsDiv.appendChild(versionDiv);
 
-                const models = fileTree[version];
-                Object.keys(models).forEach(model => {
-                    const modelDiv = document.createElement('div');
-                    modelDiv.classList.add('model');
-                    modelDiv.innerHTML = `<h3>${model}</h3><ul id="${version}-${model}-list"></ul>`;
-                    versionDiv.appendChild(modelDiv);
+                const ul = document.createElement('ul');
+                versionDiv.appendChild(ul);
 
-                    const ul = document.getElementById(`${version}-${model}-list`);
-                    models[model].forEach(file => {
-                        ul.innerHTML += createDownloadLink(version, model, file);
-                    });
+                Object.keys(fileTree[version]).forEach(file => {
+                    ul.innerHTML += createDownloadLink(version, file);
                 });
             });
         }
