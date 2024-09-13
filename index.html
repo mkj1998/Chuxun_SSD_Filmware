@@ -11,14 +11,11 @@
             padding: 20px;
             background-color: #f4f4f4;
         }
-        h1 {
+        h1, h2 {
             color: #333;
         }
         .version {
             margin-bottom: 20px;
-        }
-        .version h2 {
-            color: #555;
         }
         ul {
             list-style-type: none;
@@ -38,42 +35,43 @@
 </head>
 <body>
     <h1>Firmware Downloads</h1>
-    <div class="versions">
-        <div class="version">
-            <h2>Version 1</h2>
-            <ul>
-                <li><a href="version1/modelA.bin" download>Model A</a></li>
-                <li><a href="version1/modelB.bin" download>Model B</a></li>
-                <li><a href="version1/modelC.bin" download>Model C</a></li>
-                <li><a href="version1/modelD.bin" download>Model D</a></li>
-                <li><a href="version1/modelE.bin" download>Model E</a></li>
-                <li><a href="version1/modelF.bin" download>Model F</a></li>
-                <li><a href="version1/modelG.bin" download>Model G</a></li>
-                <li><a href="version1/modelH.bin" download>Model H</a></li>
-                <li><a href="version1/modelI.bin" download>Model I</a></li>
-                <li><a href="version1/modelJ.bin" download>Model J</a></li>
-                <li><a href="version1/modelK.bin" download>Model K</a></li>
-                <li><a href="version1/modelL.bin" download>Model L</a></li>
-            </ul>
-        </div>
-        <div class="version">
-            <h2>Version 2</h2>
-            <ul>
-                <li><a href="version2/modelA.bin" download>Model A</a></li>
-                <li><a href="version2/modelB.bin" download>Model B</a></li>
-                <li><a href="version2/modelC.bin" download>Model C</a></li>
-                <li><a href="version2/modelD.bin" download>Model D</a></li>
-                <li><a href="version2/modelE.bin" download>Model E</a></li>
-                <li><a href="version2/modelF.bin" download>Model F</a></li>
-                <li><a href="version2/modelG.bin" download>Model G</a></li>
-                <li><a href="version2/modelH.bin" download>Model H</a></li>
-                <li><a href="version2/modelI.bin" download>Model I</a></li>
-                <li><a href="version2/modelJ.bin" download>Model J</a></li>
-                <li><a href="version2/modelK.bin" download>Model K</a></li>
-                <li><a href="version2/modelL.bin" download>Model L</a></li>
-            </ul>
-        </div>
-        <!-- 按照类似的方式继续添加其他版本 -->
-    </div>
+    <div id="versions"></div>
+    <script>
+        const apiUrl = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '/contents/');
+
+        async function fetchRepoContents(path = '') {
+            const response = await fetch(apiUrl + path);
+            return response.json();
+        }
+
+        function createDownloadLink(path, name) {
+            const url = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '/') + path;
+            return `<li><a href="${url}" download>${name}</a></li>`;
+        }
+
+        async function buildDownloadList(path = '') {
+            const contents = await fetchRepoContents(path);
+            const versionsDiv = document.getElementById('versions');
+            
+            contents.forEach(async item => {
+                if (item.type === 'dir') {
+                    const versionDiv = document.createElement('div');
+                    versionDiv.classList.add('version');
+                    versionDiv.innerHTML = `<h2>${item.name}</h2><ul id="${item.name}-list"></ul>`;
+                    versionsDiv.appendChild(versionDiv);
+
+                    const files = await fetchRepoContents(item.path);
+                    const ul = document.getElementById(`${item.name}-list`);
+                    files.forEach(file => {
+                        if (file.type === 'file') {
+                            ul.innerHTML += createDownloadLink(file.path, file.name);
+                        }
+                    });
+                }
+            });
+        }
+
+        buildDownloadList();
+    </script>
 </body>
 </html>
