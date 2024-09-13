@@ -1,44 +1,252 @@
 {
-      "1.60T_Image_N": {
-        "HS36_BIST_img.bin": null,
-        "HS36_BL_img.bin": null,
-        "HS36_FW_img.bin": null,
-        "HS36_MINI_D.icm.code": null,
-        "mn-pn.001": null
+  "Work": {
+    "Chuxun_SSD_Filmware": {
+      "fileTree.json": null
+      "releases_AP_v04.1.15_dualport": {
+        "YMTC_1600G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_1600G_0928": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_1920G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_1920G_0928": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_2000G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_2000G_0928": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_3200G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_3200G_0928": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_3840G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_3840G_0928": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_4000G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_4000G_0928": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_6400G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_7680G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_8000G": {
+          "concat_all_img.bin": null
+        }
       },
-      "1.92T_Image_N": {
-        "HS36_BIST_img.bin": null,
-        "HS36_BL_img.bin": null,
-        "HS36_FW_img.bin": null,
-        "HS36_MINI_D.icm.code": null,
-        "mn-pn.001": null
+      "releases_AP_v04.2.09": {
+        "YMTC_1600G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_1600G_0928": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_1920G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_1920G_0928": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_2000G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_2000G_0928": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_3200G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_3200G_0928": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_3840G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_3840G_0928": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_4000G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_4000G_0928": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_6400G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_7680G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_8000G": {
+          "concat_all_img.bin": null
+        }
       },
-      "3.20T_Image_N": {
-        "HS36_BIST_img.bin": null,
-        "HS36_BL_img.bin": null,
-        "HS36_FW_img.bin": null,
-        "HS36_MINI_D.icm.code": null,
-        "mn-pn.001": null
+      "releases_AP_v51.1.03_dualport": {
+        "YMTC_12800G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_15360G": {
+          "concat_all_img.bin": null
+        }
       },
-      "3.84T_Image_N": {
-        "HS36_BIST_img.bin": null,
-        "HS36_BL_img.bin": null,
-        "HS36_FW_img.bin": null,
-        "HS36_MINI_D.icm.code": null,
-        "mn-pn.001": null
+      "releases_AP_v51.1.04_dualport": {
+        "YMTC_12800G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_15360G": {
+          "concat_all_img.bin": null
+        }
       },
-      "6.40T_Image_N": {
-        "HS36_BIST_img.bin": null,
-        "HS36_BL_img.bin": null,
-        "HS36_FW_img.bin": null,
-        "HS36_MINI_D.icm.code": null,
-        "mn-pn.001": null
+      "releases_AP_v51.1.05_dualport": {
+        "YMTC_12800G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_15360G": {
+          "concat_all_img.bin": null
+        }
       },
-      "7.68T_Image_N": {
-        "HS36_BIST_img.bin": null,
-        "HS36_BL_img.bin": null,
-        "HS36_FW_img.bin": null,
-        "HS36_MINI_D.icm.code": null,
-        "mn-pn.001": null
+      "releases_AP_v51.1.06_dualport": {
+        "YMTC_12800G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_15360G": {
+          "concat_all_img.bin": null
+        }
+      },
+      "releases_AP_v51.2.05": {
+        "YMTC_12800G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_15360G": {
+          "concat_all_img.bin": null
+        }
+      },
+      "releases_AP_v51.2.06": {
+        "YMTC_12800G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_15360G": {
+          "concat_all_img.bin": null
+        }
+      },
+      "releases_AP_v51.2.07": {
+        "YMTC_12800G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_15360G": {
+          "concat_all_img.bin": null
+        }
+      },
+      "releases_AP_v51.2.08": {
+        "YMTC_12800G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_15360G": {
+          "concat_all_img.bin": null
+        }
+      },
+      "releases_AP_v51.2.09": {
+        "YMTC_12800G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_15360G": {
+          "concat_all_img.bin": null
+        }
+      },
+      "releases_AP_v51.2.10": {
+        "YMTC_12800G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_15360G": {
+          "concat_all_img.bin": null
+        }
+      },
+      "releases_AP_v51.2.11": {
+        "YMTC_12800G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_15360G": {
+          "concat_all_img.bin": null
+        }
+      },
+      "releases_AP_v51.2.12": {
+        "YMTC_12800G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_15360G": {
+          "concat_all_img.bin": null
+        }
+      },
+      "releases_HGDK_v0005A": {
+        "YMTC_1600G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_1600G_0928": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_1920G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_1920G_0928": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_2000G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_2000G_0928": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_3200G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_3200G_0928": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_3840G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_3840G_0928": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_4000G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_4000G_0928": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_6400G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_7680G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_8000G": {
+          "concat_all_img.bin": null
+        }
+      },
+      "releases_HGDK_v0005B": {
+        "YMTC_12800G": {
+          "concat_all_img.bin": null
+        },
+        "YMTC_15360G": {
+          "concat_all_img.bin": null
+        }
       }
+    }
+  }
 }
