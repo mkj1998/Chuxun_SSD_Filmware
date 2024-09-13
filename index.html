@@ -37,31 +37,39 @@
     <h1>Firmware Downloads</h1>
     <div id="versions"></div>
     <script>
-        const fileTree = {
-            "version1": ["modelA.bin", "modelB.bin", "modelC.bin", "modelD.bin", "modelE.bin", "modelF.bin", "modelG.bin", "modelH.bin", "modelI.bin", "modelJ.bin", "modelK.bin", "modelL.bin"],
-            "version2": ["modelA.bin", "modelB.bin", "modelC.bin", "modelD.bin", "modelE.bin", "modelF.bin", "modelG.bin", "modelH.bin", "modelI.bin", "modelJ.bin", "modelK.bin", "modelL.bin"],
-            "version3": ["modelA.bin", "modelB.bin", "modelC.bin", "modelD.bin", "modelE.bin", "modelF.bin", "modelG.bin", "modelH.bin", "modelI.bin", "modelJ.bin", "modelK.bin", "modelL.bin"],
-            "version4": ["modelA.bin", "modelB.bin", "modelC.bin", "modelD.bin", "modelE.bin", "modelF.bin", "modelG.bin", "modelH.bin", "modelI.bin", "modelJ.bin", "modelK.bin", "modelL.bin"],
-            // 添加其他版本
-        };
+        const username = 'mkj1998'; // 你的GitHub用户名
+        const repo = 'Chuxun_SSD_Filmware'; // 你的仓库名称
+        const apiUrl = \`https://api.github.com/repos/\${username}/\${repo}/contents/\`;
 
-        function createDownloadLink(version, name) {
-            const url = `firmware/${version}/${name}`;
-            return `<li><a href="${url}" download>${name}</a></li>`;
+        async function fetchRepoContents(path = '') {
+            const response = await fetch(apiUrl + path);
+            return response.json();
         }
 
-        function buildDownloadList() {
-            const versionsDiv = document.getElementById('versions');
-            Object.keys(fileTree).forEach(version => {
-                const versionDiv = document.createElement('div');
-                versionDiv.classList.add('version');
-                versionDiv.innerHTML = `<h2>${version}</h2><ul id="${version}-list"></ul>`;
-                versionsDiv.appendChild(versionDiv);
+        function createDownloadLink(path, name) {
+            const url = \`https://raw.githubusercontent.com/\${username}/\${repo}/main/\${path}\`;
+            return \`<li><a href="\${url}" download>\${name}</a></li>\`;
+        }
 
-                const ul = document.getElementById(`${version}-list`);
-                fileTree[version].forEach(file => {
-                    ul.innerHTML += createDownloadLink(version, file);
-                });
+        async function buildDownloadList(path = '') {
+            const contents = await fetchRepoContents(path);
+            const versionsDiv = document.getElementById('versions');
+            
+            contents.forEach(async item => {
+                if (item.type === 'dir') {
+                    const versionDiv = document.createElement('div');
+                    versionDiv.classList.add('version');
+                    versionDiv.innerHTML = \`<h2>\${item.name}</h2><ul id="\${item.name}-list"></ul>\`;
+                    versionsDiv.appendChild(versionDiv);
+
+                    const files = await fetchRepoContents(item.path);
+                    const ul = document.getElementById(\`\${item.name}-list\`);
+                    files.forEach(file => {
+                        if (file.type === 'file') {
+                            ul.innerHTML += createDownloadLink(file.path, file.name);
+                        }
+                    });
+                }
             });
         }
 
