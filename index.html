@@ -37,9 +37,9 @@
     <h1>Firmware Downloads</h1>
     <div id="versions"></div>
     <script>
-        function createDownloadLink(version, name) {
-            const url = `${version}/${name}`;
-            return `<li><a href="${url}" download>${name}</a></li>`;
+        function createDownloadLink(version, subdir, filename) {
+            const url = `${version}/${subdir}/${filename}`;
+            return `<li><a href="${url}" download>${filename}</a></li>`;
         }
 
         function buildDownloadList(fileTree) {
@@ -53,8 +53,10 @@
                 const ul = document.createElement('ul');
                 versionDiv.appendChild(ul);
 
-                Object.keys(fileTree[version]).forEach(file => {
-                    ul.innerHTML += createDownloadLink(version, file);
+                Object.keys(fileTree[version]).forEach(folder => {
+                    Object.keys(fileTree[version][folder]).forEach(file => {
+                        ul.innerHTML += createDownloadLink(version, folder, file);
+                    });
                 });
             });
         }
